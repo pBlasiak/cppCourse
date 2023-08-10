@@ -9,25 +9,75 @@
 
 //------------------------------------------------------------------------------
 
-int main()
-{
-    using namespace Graph_lib;   // our graphics facilities are in Graph_lib
+using namespace Graph_lib;
 
-    Point tl(100,100);           // to become top left  corner of window
+//------------------------------------------------------------------------------
 
-    Simple_window win(tl,600,400,"Canvas");    // make a simple window
+// first version
+int main ()
+try
+{ 
+    Point tl(100,100);          // top-left corner of our window
 
-    Graph_lib::Polygon poly;                // make a shape (a polygon)
+    Simple_window win(tl,600,400,"Canvas");
+    // screen coordinate tl for top-left corner
+    // window size(600*400)
+    // title: Canvas
 
-    poly.add(Point(300,200));    // add a point
-    poly.add(Point(350,100));    // add another point
-    poly.add(Point(400,200));    // add a third point 
-
-    poly.set_color(Color::red);  // adjust properties of poly
-
-    win.attach (poly);           // connect poly to the window
-
-    win.wait_for_button();       // give control to the display engine
+    Axis xa(Axis::x, Point(20,300), 280, 10, "x axis"); // make an Axis
+    // an axis is a kind of Shape
+    // Axis::x means horizontal
+    // starting at (20,300)
+    // 280 pixels long
+    // 10 "notches"
+    // label the axis "x axis"
+    win.attach(xa);             // attach xa to the window, win
+    win.set_label("Canvas #2"); // re-label the window
+    win.wait_for_button();      // Display!
+} 
+catch(exception& e) {
+    // some error reporting
+    return 1;
 }
+catch(...) {
+    // some more error reporting
+    return 2;
+}
+
+// second version
+//int main ()
+//try
+//{ 
+//    Point tl(100,100);                   // top-left corner of our window
+//
+//    Simple_window win(tl,600,400,"Canvas");
+//    // screen coordinate tl for top-left corner
+//    // window size(600*400)
+//    // title: Canvas
+//
+//    Axis xa(Axis::x, Point(20,300), 280, 10, "x axis"); // make an Axis
+//    // an axis is a kind of Shape
+//    // Axis::x means horizontal
+//    // starting at (20,300)
+//    // 280 pixels long
+//    // 10 "notches"
+//    // label the axis "x axis"
+//    win.attach(xa);                      // attach xa to the window, win
+//
+//    Axis ya(Axis::y, Point(20,300), 280, 10, "y axis");
+//    ya.set_color(Color::cyan);           // choose a color
+//    ya.label.set_color(Color::dark_red); // choose a color for the text
+//    win.attach(ya);
+//    win.set_label("Canvas #3");
+//    win.wait_for_button();               // Display!
+//} 
+//catch(exception& e) {
+//    // some error reporting
+//    return 1;
+//}
+//catch(...) {
+//    // some more error reporting
+//    return 2;
+//}
 
 //------------------------------------------------------------------------------
