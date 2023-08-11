@@ -13,17 +13,20 @@ int main()
 {
     using namespace Graph_lib;   // our graphics facilities are in Graph_lib
 
-    Point tl(100,100);           // to become top left  corner of window
+    // Ex. 1
+    Point tl(10,10);           // to become top left  corner of window
 
-    Simple_window win(tl,600,400,"Canvas");    // make a simple window
+    Simple_window win(tl,800,800,"Ex. 1");    // make a simple window
 
     Graph_lib::Polygon poly;                // make a shape (a polygon)
 
-    poly.add(Point(300,200));    // add a point
-    poly.add(Point(350,100));    // add another point
-    poly.add(Point(400,200));    // add a third point 
+    poly.add(Point(550,450));    // add a point
+    poly.add(Point(455,519));    // add another point
+    poly.add(Point(491,631));    // add a third point 
+    poly.add(Point(609,631));    // add a fourth point 
+    poly.add(Point(645,519));    // add a fifth point 
 
-    poly.set_color(Color::red);  // adjust properties of poly
+    poly.set_color(Color::blue);  // adjust properties of poly
 
     win.attach (poly);           // connect poly to the window
 
