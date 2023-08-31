@@ -129,14 +129,108 @@ int main()
     //win.wait_for_button();       // give control to the display engine
 
     // Ex. 6
-    Point tl(10,10);           // to become top left  corner of window
+    //Point tl(10,10);           // to become top left  corner of window
 
-    Simple_window win(tl,800,800,"Ex. 6");    // make a simple window
+    //// za duzy obiekt w oknie
+    ////Simple_window win(tl,800,800,"Ex. 6 - too big Shape");    // make a simple window
+
+    ////Text t(Point(160, 210), "Witaj C++");
+    ////t.set_color(Color::dark_red);
+    ////t.set_font_size(499);
+
+    ////win.attach(t);
+
+    //// za duze okno w ekranie monitora
+    //Simple_window win(tl,8000,8000,"Ex. 6 - too big Window");    // make a simple window
 
 
-    win.attach(s1);
+    //win.wait_for_button();       // give control to the display engine
 
-    win.wait_for_button();       // give control to the display engine
+    // Ex. 7
+    //Point tl(100,100);           // to become top left  corner of window
+
+    //Simple_window win(tl,800,500,"Ex. 7");    // make a simple window
+
+    //Graph_lib::Rectangle r(Point(200, 200), 400, 200);
+    //r.set_color(Color::black);
+    //Graph_lib::Rectangle wind1(Point(250, 250), 40, 120);
+    //wind1.set_color(Color::black);
+    //Graph_lib::Rectangle wind2(Point(450, 250), 40, 120);
+    //wind2.set_color(Color::black);
+    //Graph_lib::Polygon door;
+    //door.add(Point{350,400});
+    //door.add(Point{350,300});
+    //door.add(Point{400,300});
+    //door.add(Point{400,400});
+    //door.set_color(Color::green);
+    //Graph_lib::Polygon roof;
+    //roof.add(Point{ 200,200 });
+    //roof.add(Point{ 400,100 });
+    //roof.add(Point{ 600,200 });
+    //roof.set_color(Color::red);
+    //Graph_lib::Polygon chimney;
+    //chimney.add(Point{500,150});
+    //chimney.add(Point{500,120});
+    //chimney.add(Point{550,120});
+    //chimney.add(Point{550,175});
+    //chimney.set_color(Color::blue);
+    //Graph_lib::Function smoke(sin, 0, 100, Point{ 510,110 }, 1000, 10, 10);
+    //smoke.set_color(Color::cyan);
+
+
+    //win.attach(r);
+    //win.attach(wind1);
+    //win.attach(wind2);
+    //win.attach(door);
+    //win.attach(roof);
+    //win.attach(chimney);
+    //win.attach(smoke);
+
+
+    //win.wait_for_button();       // give control to the display engine
+
+
+    // Ex. 8
+    //Point tl(100,100);           // to become top left  corner of window
+
+    //Simple_window win(tl,600,400,"Ex. 8");    // make a simple window
+    //Graph_lib::Circle blue(Point{200,200}, 50);
+    //blue.set_color(Color::blue);
+    //const int circThick = 6;
+    //blue.set_style(Line_style(Line_style::solid,circThick));
+    //Graph_lib::Circle black(Point{320,200}, 50);
+    //black.set_color(Color::black);
+    //black.set_style(Line_style(Line_style::solid,circThick));
+    //Graph_lib::Circle red(Point{320+120,200}, 50);
+    //red.set_color(Color::red);
+    //red.set_style(Line_style(Line_style::solid,circThick));
+    //Graph_lib::Circle yellow(Point{260,250}, 50);
+    //yellow.set_color(Color::yellow);
+    //yellow.set_style(Line_style(Line_style::solid,circThick));
+    //Graph_lib::Circle green(Point{260+120,250}, 50);
+    //green.set_color(Color::green);
+    //green.set_style(Line_style(Line_style::solid,circThick));
+
+    //win.attach(blue);
+    //win.attach(black);
+    //win.attach(red);
+    //win.attach(yellow);
+    //win.attach(green);
+
+    //win.wait_for_button();       // give control to the display engine
+
+    // Ex. 9
+    //Point tl(100,100);           // to become top left  corner of window
+
+    //Simple_window win(tl,600,600,"To jest gitara Gibson ES 335");    // make a simple window
+    //Graph_lib::Image im(Point{10,10}, "GibsonEs335.jpg");
+    //Graph_lib::Text podpis{Point{70,450}, "Rys. Gitara typu hollow-body Gibson ES 335"};
+    //podpis.set_color(Color::blue);
+
+    //win.attach(im);
+    //win.attach(podpis);
+
+    //win.wait_for_button();       // give control to the display engine
 }
 
 //------------------------------------------------------------------------------
