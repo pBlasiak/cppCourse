@@ -6,6 +6,7 @@
 
 #include "Simple_window.h"    // get access to our window library
 #include "Graph.h"            // get access to our graphics library facilities
+#include "Arc.h"            // get access to our graphics library facilities
 
 //------------------------------------------------------------------------------
 
