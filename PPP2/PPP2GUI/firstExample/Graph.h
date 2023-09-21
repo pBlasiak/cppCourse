@@ -157,7 +157,7 @@ public:
 	Shape& operator=(const Shape&) = delete;
 private:
 	vector<Point> points;	// not used by all shapes
-	Color lcolor {fl_color()};
+	Color lcolor {int(fl_color())};
 	Line_style ls {0};
 	Color fcolor {Color::invisible};
 

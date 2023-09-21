@@ -2,6 +2,9 @@
 #define ARC_H
 
 #include "Graph.h"
+
+namespace Graph_lib
+{
 class Arc :
     public Shape
 {
@@ -30,6 +33,7 @@ public:
 		add(Point{ c.x - w, c.y - h });
     }
 
-};
+}; 
+} // end namespace Graph_lib
 
 #endif // !ARC_H
