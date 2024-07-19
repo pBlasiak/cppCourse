@@ -11,24 +11,32 @@
 //------------------------------------------------------------------------------
 
 int main()
+try
 {
-    using namespace Graph_lib;   // our graphics facilities are in Graph_lib
+    {
+        //using namespace Graph_lib;   // our graphics facilities are in Graph_lib
 
-    Point tl(100,100);           // to become top left  corner of window
+        Point tl(100, 100);           // to become top left  corner of window
 
-    Simple_window win(tl,600,400,"Canvas");    // make a simple window
+        Simple_window win(tl, 600, 400, "Canvas");    // make a simple window
 
-    Graph_lib::Polygon poly;                // make a shape (a polygon)
+        /* Exercise 13.1 */
+        // class Arc was implemented using fl_arc
+        Graph_lib::Arc arc(Point{ 100,200 }, 100, 200, 30, 154);
+        arc.set_color(Color::blue);
+        win.attach(arc);
+        /* End of Exercise 13.1 */
 
-    poly.add(Point(300,200));    // add a point
-    poly.add(Point(350,100));    // add another point
-    poly.add(Point(400,200));    // add a third point 
-
-    poly.set_color(Color::red);  // adjust properties of poly
-
-    win.attach (poly);           // connect poly to the window
-
-    win.wait_for_button();       // give control to the display engine
+        win.wait_for_button();       // give control to the display engine
+    }
+}
+catch (exception& e) {
+    std::cout << e.what() << std::endl;
+    return 1;
+}
+catch (...) {
+    // some more error reporting
+    return 2;
 }
 
 //------------------------------------------------------------------------------
