@@ -10,8 +10,8 @@ class Arc :
 {
 private:
 
-    //- Center coordinates
-    Point center_;
+    //- Left top corner coordinates
+    Point ltc_;
 
     //- Width
     int w_;
@@ -29,7 +29,7 @@ private:
 
 public:
     Arc(Point c, int w, int h, double a1, double a2)
-        : center_{ c }, w_{ w }, h_{ h }, a1_{ a1 }, a2_{ a2 }
+        : ltc_{ c }, w_{ w }, h_{ h }, a1_{ a1 }, a2_{ a2 }
     {
         if (a1_ > a2_) error("a2 angle must be greater or equal to a1");
 		add(Point{ c.x - w, c.y - h });
@@ -37,6 +37,9 @@ public:
 
     // it has to be defined to be drawn
     void draw_lines() const override;
+
+    //- Returns left top corner
+    Point ltc() const { return ltc_; }
 
 }; 
 } // end namespace Graph_lib
