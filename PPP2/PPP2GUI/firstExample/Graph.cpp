@@ -355,4 +355,41 @@ void Image::draw_lines() const
 		p->draw(point(0).x,point(0).y);
 }
 
+Point n(const Rectangle& r)
+{
+	return Point{ r.point(0).x + r.width() / 2,r.point(0).y };
+}
+Point w(const Rectangle& r)
+{
+	return Point{ r.point(0).x, r.point(0).y+r.height()/2};
+}
+Point e(const Rectangle& r)
+{
+	return Point{ r.point(0).x+r.width(), r.point(0).y + r.height() / 2};
+}
+Point s(const Rectangle& r)
+{
+	return Point{ r.point(0).x+r.width()/2, r.point(0).y + r.height()};
+}
+Point nw(const Rectangle& r)
+{
+	return r.point(0); 
+}
+Point ne(const Rectangle& r)
+{
+	return Point{ r.point(0).x+r.width(), r.point(0).y};
+}
+Point sw(const Rectangle& r)
+{
+	return Point{ r.point(0).x, r.point(0).y+r.height()};
+}
+Point se(const Rectangle& r)
+{
+	return Point{ r.point(0).x+r.width(), r.point(0).y + r.height()};
+}
+Point center(const Rectangle& r)
+{
+	return Point{ r.point(0).x+r.width()/2, r.point(0).y + r.height() / 2};
+}
+
 } // Graph

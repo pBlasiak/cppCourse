@@ -373,6 +373,18 @@ private:
 	Text fn;
 };
 
+// define “connection points” on and in the rectangle. For example, nw(r) is the
+// northwest (top left) corner of a Rectangle called r.
+Point n(const Rectangle& r);
+Point w(const Rectangle& r);
+Point e(const Rectangle& r);
+Point s(const Rectangle& r);
+Point nw(const Rectangle& r);
+Point ne(const Rectangle& r);
+Point sw(const Rectangle& r);
+Point se(const Rectangle& r);
+Point center(const Rectangle& r);
+
 }
 #endif
 
