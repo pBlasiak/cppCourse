@@ -134,6 +134,7 @@
     <ClCompile Include="Arc.cpp" />
     <ClCompile Include="Arrow\Arrow.cpp" />
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="LabeledBox\LabeledBox.cpp" />
     <ClCompile Include="main.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\pblasiak\D\DYDAKTYKA\PRZEDMIOTY\CPP\fltk\fltkKurs\PPP2\GUI;C:\Users\pblasiak\D\DYDAKTYKA\PRZEDMIOTY\CPP\fltk\fltk-1.3.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -148,6 +149,7 @@
     <ClInclude Include="fltk.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="Gui.h" />
+    <ClInclude Include="LabeledBox\LabeledBox.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Simple_window.h" />
     <ClInclude Include="std_lib_facilities.h" />

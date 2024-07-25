@@ -9,6 +9,7 @@
 #include "Arc.h"            // get access to our graphics library facilities
 #include "Box.h"            // get access to our graphics library facilities
 #include "Arrow/Arrow.h"            // get access to our graphics library facilities
+#include "LabeledBox/LabeledBox.h"            // get access to our graphics library facilities
 
 //------------------------------------------------------------------------------
 
@@ -18,9 +19,9 @@ try
     {
         //using namespace Graph_lib;   // our graphics facilities are in Graph_lib
 
-        Point tl(100, 100);           // to become top left  corner of window
+        Point tl(10, 10);           // to become top left  corner of window
 
-        Simple_window win(tl, 600, 400, "Canvas");    // make a simple window
+        Simple_window win(tl, 800, 600, "Canvas");    // make a simple window
 
         /* EXERCISE 13.1 */
         // class Arc was implemented using fl_arc
@@ -51,41 +52,61 @@ try
         //win.wait_for_button();       // give control to the display engine
         /* End of EXERCISE 13.3 */
 
-        /* EXERCISE 13.4 - Line with arrowhead */
-        // na razie niedokonczone, zostawiam na pozniej
-        Graph_lib::Rectangle r{ Point{210,110}, 56, 30};
-        r.set_color(Color::blue);
-        Mark mn{ n(r), 'x' };
-        mn.set_color(Color::red);
-        Mark mw{ w(r), 'x' };
-        mw.set_color(Color::dark_yellow);
-        Mark me{ e(r), 'x' };
-        me.set_color(Color::yellow);
-        Mark ms{ s(r), 'x' };
-        ms.set_color(Color::dark_cyan);
-        Mark mnw{ nw(r), 'x' };
-        Mark mne{ ne(r), 'x' };
-        mne.set_color(Color::green);
-        Mark msw{ sw(r), 'x' };
-        msw.set_color(Color::magenta);
-        Mark mse{ se(r), 'x' };
-        mse.set_color(Color::dark_red);
-        Mark mcenter{ center(r), 'x' };
-        mcenter.set_color(Color::white);
+        /* EXERCISE 13.4 - Connection points of a rectangle */
+        //Graph_lib::Rectangle r{ Point{210,110}, 56, 30};
+        //r.set_color(Color::blue);
+        //Mark mn{ n(r), 'x' };
+        //mn.set_color(Color::red);
+        //Mark mw{ w(r), 'x' };
+        //mw.set_color(Color::dark_yellow);
+        //Mark me{ e(r), 'x' };
+        //me.set_color(Color::yellow);
+        //Mark ms{ s(r), 'x' };
+        //ms.set_color(Color::dark_cyan);
+        //Mark mnw{ nw(r), 'x' };
+        //Mark mne{ ne(r), 'x' };
+        //mne.set_color(Color::green);
+        //Mark msw{ sw(r), 'x' };
+        //msw.set_color(Color::magenta);
+        //Mark mse{ se(r), 'x' };
+        //mse.set_color(Color::dark_red);
+        //Mark mcenter{ center(r), 'x' };
+        //mcenter.set_color(Color::white);
  
-        win.attach(r);
-        win.attach(mn);
-        win.attach(mw);
-        win.attach(me);
-        win.attach(ms);
-        win.attach(mnw);
-        win.attach(mne);
-        win.attach(msw);
-        win.attach(mse);
-        win.attach(mcenter);
+        //win.attach(r);
+        //win.attach(mn);
+        //win.attach(mw);
+        //win.attach(me);
+        //win.attach(ms);
+        //win.attach(mnw);
+        //win.attach(mne);
+        //win.attach(msw);
+        //win.attach(mse);
+        //win.attach(mcenter);
+
+        //win.wait_for_button();       // give control to the display engine
+        /* End of EXERCISE 13.4 */
+
+
+
+        /* EXERCISE 13.5 - Connection points of a circle and elipse */
+        // nie zrobione
 
         win.wait_for_button();       // give control to the display engine
-        /* End of EXERCISE 13.4 */
+        /* End of EXERCISE 13.5 */
+
+
+
+        /* EXERCISE 13.6 - Class diagram */
+        Graph_lib::LabeledBox window{ Point{20,20}, 100, 40, 5, "Window" };
+        window.set_fill_color(Color::dark_green);
+        window.label().set_font(Font::times_bold);
+
+        win.attach(window);
+ 
+
+        win.wait_for_button();       // give control to the display engine
+        /* End of EXERCISE 13.6 */
     }
 }
 catch (exception& e) {
