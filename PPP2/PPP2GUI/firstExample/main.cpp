@@ -98,11 +98,19 @@ try
 
 
         /* EXERCISE 13.6 - Class diagram */
-        Graph_lib::LabeledBox window{ Point{20,20}, 100, 40, 5, "Window" };
+        Graph_lib::LabeledBox window{ Point{40,20}, 100, 40, 5, "Window" };
         window.set_fill_color(Color::dark_green);
         window.label().set_font(Font::times_bold);
 
+        Graph_lib::LabeledBox simpleWindow{ Point{20,100}, 140, 40, 5, "Simple_window" };
+        simpleWindow.set_fill_color(Color::dark_green);
+        simpleWindow.label().set_font(Font::times_bold);
+
+        Arrow a1{ s(window), n(simpleWindow) };
+
         win.attach(window);
+        win.attach(simpleWindow);
+        win.attach(a1);
  
 
         win.wait_for_button();       // give control to the display engine
