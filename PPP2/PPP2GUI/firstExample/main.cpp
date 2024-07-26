@@ -92,100 +92,157 @@ try
         /* EXERCISE 13.5 - Connection points of a circle and elipse */
         // nie zrobione
 
-        win.wait_for_button();       // give control to the display engine
+        //win.wait_for_button();       // give control to the display engine
         /* End of EXERCISE 13.5 */
 
 
-
         /* EXERCISE 13.6 - Class diagram */
-        Graph_lib::LabeledBox window{ Point{40,20}, 100, 40, 5, "Window" };
-        window.set_fill_color(Color::dark_green);
-        window.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox window{ Point{40,20}, 100, 40, 5, "Window" };
+        //window.set_fill_color(Color::dark_green);
+        //window.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox simpleWindow{ Point{20,100}, 140, 40, 5, "Simple_window" };
-        simpleWindow.set_fill_color(Color::dark_green);
-        simpleWindow.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox simpleWindow{ Point{20,100}, 140, 40, 5, "Simple_window" };
+        //simpleWindow.set_fill_color(Color::dark_green);
+        //simpleWindow.label().set_font(Font::times_bold);
 
-        Arrow a1{ s(window), n(simpleWindow) };
+        //Arrow a1{ s(window), n(simpleWindow) };
 
-        Graph_lib::LabeledBox lineStyle{ Point{310,20}, 100, 40, 5, "Line_style" };
-        lineStyle.set_fill_color(Color::dark_green);
-        lineStyle.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox lineStyle{ Point{310,20}, 100, 40, 5, "Line_style" };
+        //lineStyle.set_fill_color(Color::dark_green);
+        //lineStyle.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox color{ Point{610,20}, 100, 40, 5, "Color" };
-        color.set_fill_color(Color::dark_green);
-        color.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox color{ Point{610,20}, 100, 40, 5, "Color" };
+        //color.set_fill_color(Color::dark_green);
+        //color.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox shape{ Point{310,100}, 100, 40, 5, "Shape" };
-        shape.set_fill_color(Color::dark_green);
-        shape.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox shape{ Point{310,100}, 100, 40, 5, "Shape" };
+        //shape.set_fill_color(Color::dark_green);
+        //shape.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox point{ Point{610,100}, 100, 40, 5, "Point" };
-        point.set_fill_color(Color::dark_green);
-        point.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox point{ Point{610,100}, 100, 40, 5, "Point" };
+        //point.set_fill_color(Color::dark_green);
+        //point.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox line{ Point{20,180}, 80, 40, 5, "Line" };
-        line.set_fill_color(Color::dark_green);
-        line.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox line{ Point{20,180}, 80, 40, 5, "Line" };
+        //line.set_fill_color(Color::dark_green);
+        //line.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox lines{ Point{120,180}, 80, 40, 5, "Lines" };
-        lines.set_fill_color(Color::dark_green);
-        lines.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox lines{ Point{120,180}, 80, 40, 5, "Lines" };
+        //lines.set_fill_color(Color::dark_green);
+        //lines.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox polygon{ Point{220,180}, 80, 40, 5, "Polygon" };
-        polygon.set_fill_color(Color::dark_green);
-        polygon.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox polygon{ Point{220,180}, 80, 40, 5, "Polygon" };
+        //polygon.set_fill_color(Color::dark_green);
+        //polygon.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox axis{ Point{320,180}, 80, 40, 5, "Axis" };
-        axis.set_fill_color(Color::dark_green);
-        axis.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox axis{ Point{320,180}, 80, 40, 5, "Axis" };
+        //axis.set_fill_color(Color::dark_green);
+        //axis.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox rectangle{ Point{420,180}, 80, 40, 5, "Rectangle" };
-        rectangle.set_fill_color(Color::dark_green);
-        rectangle.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox rectangle{ Point{420,180}, 80, 40, 5, "Rectangle" };
+        //rectangle.set_fill_color(Color::dark_green);
+        //rectangle.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox text{ Point{520,180}, 80, 40, 5, "Text" };
-        text.set_fill_color(Color::dark_green);
-        text.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox text{ Point{520,180}, 80, 40, 5, "Text" };
+        //text.set_fill_color(Color::dark_green);
+        //text.label().set_font(Font::times_bold);
 
-        Graph_lib::LabeledBox image{ Point{620,180}, 80, 40, 5, "Image" };
-        image.set_fill_color(Color::dark_green);
-        image.label().set_font(Font::times_bold);
+        //Graph_lib::LabeledBox image{ Point{620,180}, 80, 40, 5, "Image" };
+        //image.set_fill_color(Color::dark_green);
+        //image.label().set_font(Font::times_bold);
 
-        Arrow a2{ s(shape), n(line) };
-        Arrow a3{ s(shape), n(lines) };
-        Arrow a4{ s(shape), n(polygon) };
-        Arrow a5{ s(shape), n(axis) };
-        Arrow a6{ s(shape), n(rectangle) };
-        Arrow a7{ s(shape), n(text) };
-        Arrow a8{ s(shape), n(image) };
+        //Arrow a2{ s(shape), n(line) };
+        //Arrow a3{ s(shape), n(lines) };
+        //Arrow a4{ s(shape), n(polygon) };
+        //Arrow a5{ s(shape), n(axis) };
+        //Arrow a6{ s(shape), n(rectangle) };
+        //Arrow a7{ s(shape), n(text) };
+        //Arrow a8{ s(shape), n(image) };
 
-        win.attach(window);
-        win.attach(simpleWindow);
-        win.attach(lineStyle);
-        win.attach(color);
-        win.attach(shape);
-        win.attach(point);
-        win.attach(line);
-        win.attach(lines);
-        win.attach(polygon);
-        win.attach(axis);
-        win.attach(rectangle);
-        win.attach(text);
-        win.attach(image);
+        //win.attach(window);
+        //win.attach(simpleWindow);
+        //win.attach(lineStyle);
+        //win.attach(color);
+        //win.attach(shape);
+        //win.attach(point);
+        //win.attach(line);
+        //win.attach(lines);
+        //win.attach(polygon);
+        //win.attach(axis);
+        //win.attach(rectangle);
+        //win.attach(text);
+        //win.attach(image);
 
-        win.attach(a1);
-        win.attach(a2);
-        win.attach(a3);
-        win.attach(a4);
-        win.attach(a5);
-        win.attach(a6);
-        win.attach(a7);
-        win.attach(a8);
+        //win.attach(a1);
+        //win.attach(a2);
+        //win.attach(a3);
+        //win.attach(a4);
+        //win.attach(a5);
+        //win.attach(a6);
+        //win.attach(a7);
+        //win.attach(a8);
  
-
-        win.wait_for_button();       // give control to the display engine
+        //win.wait_for_button();       // give control to the display engine
         /* End of EXERCISE 13.6 */
+
+
+        /* EXERCISE 13.7 - RGB chart */
+        // rozwiazanie z https://github.com/bewuethr/stroustrup-ppp/blob/main/chapter13/chapter13_ex07.cpp
+
+        //using namespace Graph_lib;
+
+        //Point tl(200,50);
+        //Simple_window win(tl,1200,800,"RGB chart");
+        //Vector_ref<Graph_lib::Rectangle> rects;
+
+        //for (int i1 = 0; i1<4; ++i1) {
+        //    for (int i2 = 0; i2<4; ++i2) {
+        //        for (int j = 0; j<16; ++j) {
+        //            for (int k = 0; k<16; ++k) {
+        //                rects.push_back(new Graph_lib::Rectangle(Point(16*12*i1+12*k,16*12*i2+12*j),12,12));
+        //                rects[rects.size()-1].set_fill_color(fl_rgb_color(15*(4*i1+i2),15*j,15*k));
+        //                rects[rects.size()-1].set_color(Color(Color::black,Color::invisible));
+        //                win.attach(rects[rects.size()-1]);
+        //            }
+        //        }
+        //    }
+        //}
+        //win.wait_for_button();
+
+        //for (int i = 0; i<rects.size(); ++i)
+        //    win.detach(rects[i]);
+
+        //const int box_h = 22;
+        //const int box_w = 88;
+        //Vector_ref<Graph_lib::Rectangle> boxes;
+        //Vector_ref<Text> labels;
+
+        //for (int i = 0; i<6; ++i) {
+        //    for (int j = 0; j<6; ++j) {
+        //        for (int k = 0; k<6; ++k) {
+        //            boxes.push_back(new Graph_lib::Rectangle(Point(k*box_w,i*6*box_h+j*box_h),box_w,box_h));
+        //            boxes[boxes.size()-1].set_fill_color(fl_rgb_color(51*i,51*j,51*k));
+        //            boxes[boxes.size()-1].set_color(Color(Color::black,Color::invisible));
+        //            win.attach(boxes[boxes.size()-1]);
+        //            ostringstream oss;
+        //            oss << hex << uppercase << setfill('0') << left <<
+        //                setw(2) << 51*i << setw(2) << 51*j << setw(2) << 51*k;
+        //            labels.push_back(new Text(Point(k*box_w+20,i*6*box_h+j*box_h+16),oss.str().c_str()));
+        //            if (j<=2) labels[labels.size()-1].set_color(Color::white);
+        //            win.attach(labels[labels.size()-1]);
+        //        }
+        //    }
+        //}
+        //win.wait_for_button();
+
+        /* End of EXERCISE 13.7 */
+
+
+        /* EXERCISE 13.8 - Regular_hexagon */
+
+
+        win.wait_for_button();
+        /* End of EXERCISE 13.8 */
     }
 }
 catch (exception& e) {
