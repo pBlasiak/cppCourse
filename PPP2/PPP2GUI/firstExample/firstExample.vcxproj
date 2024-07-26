@@ -140,6 +140,7 @@
     </ClCompile>
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="RegularHexagon\RegularHexagon.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="Gui.h" />
     <ClInclude Include="LabeledBox\LabeledBox.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="RegularHexagon\RegularHexagon.h" />
     <ClInclude Include="Simple_window.h" />
     <ClInclude Include="std_lib_facilities.h" />
     <ClInclude Include="Window.h" />

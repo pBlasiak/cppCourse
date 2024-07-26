@@ -10,6 +10,7 @@
 #include "Box.h"            // get access to our graphics library facilities
 #include "Arrow/Arrow.h"            // get access to our graphics library facilities
 #include "LabeledBox/LabeledBox.h"            // get access to our graphics library facilities
+#include "RegularHexagon/RegularHexagon.h"            // get access to our graphics library facilities
 
 //------------------------------------------------------------------------------
 
@@ -239,7 +240,10 @@ try
 
 
         /* EXERCISE 13.8 - Regular_hexagon */
+        Graph_lib::RegularHexagon rh{ Point{200,200}, 60 };
+        rh.set_color(Color::red);
 
+        win.attach(rh);
 
         win.wait_for_button();
         /* End of EXERCISE 13.8 */
