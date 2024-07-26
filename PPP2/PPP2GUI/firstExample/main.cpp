@@ -108,9 +108,80 @@ try
 
         Arrow a1{ s(window), n(simpleWindow) };
 
+        Graph_lib::LabeledBox lineStyle{ Point{310,20}, 100, 40, 5, "Line_style" };
+        lineStyle.set_fill_color(Color::dark_green);
+        lineStyle.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox color{ Point{610,20}, 100, 40, 5, "Color" };
+        color.set_fill_color(Color::dark_green);
+        color.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox shape{ Point{310,100}, 100, 40, 5, "Shape" };
+        shape.set_fill_color(Color::dark_green);
+        shape.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox point{ Point{610,100}, 100, 40, 5, "Point" };
+        point.set_fill_color(Color::dark_green);
+        point.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox line{ Point{20,180}, 80, 40, 5, "Line" };
+        line.set_fill_color(Color::dark_green);
+        line.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox lines{ Point{120,180}, 80, 40, 5, "Lines" };
+        lines.set_fill_color(Color::dark_green);
+        lines.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox polygon{ Point{220,180}, 80, 40, 5, "Polygon" };
+        polygon.set_fill_color(Color::dark_green);
+        polygon.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox axis{ Point{320,180}, 80, 40, 5, "Axis" };
+        axis.set_fill_color(Color::dark_green);
+        axis.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox rectangle{ Point{420,180}, 80, 40, 5, "Rectangle" };
+        rectangle.set_fill_color(Color::dark_green);
+        rectangle.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox text{ Point{520,180}, 80, 40, 5, "Text" };
+        text.set_fill_color(Color::dark_green);
+        text.label().set_font(Font::times_bold);
+
+        Graph_lib::LabeledBox image{ Point{620,180}, 80, 40, 5, "Image" };
+        image.set_fill_color(Color::dark_green);
+        image.label().set_font(Font::times_bold);
+
+        Arrow a2{ s(shape), n(line) };
+        Arrow a3{ s(shape), n(lines) };
+        Arrow a4{ s(shape), n(polygon) };
+        Arrow a5{ s(shape), n(axis) };
+        Arrow a6{ s(shape), n(rectangle) };
+        Arrow a7{ s(shape), n(text) };
+        Arrow a8{ s(shape), n(image) };
+
         win.attach(window);
         win.attach(simpleWindow);
+        win.attach(lineStyle);
+        win.attach(color);
+        win.attach(shape);
+        win.attach(point);
+        win.attach(line);
+        win.attach(lines);
+        win.attach(polygon);
+        win.attach(axis);
+        win.attach(rectangle);
+        win.attach(text);
+        win.attach(image);
+
         win.attach(a1);
+        win.attach(a2);
+        win.attach(a3);
+        win.attach(a4);
+        win.attach(a5);
+        win.attach(a6);
+        win.attach(a7);
+        win.attach(a8);
  
 
         win.wait_for_button();       // give control to the display engine
