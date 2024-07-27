@@ -240,13 +240,34 @@ try
 
 
         /* EXERCISE 13.8 - Regular_hexagon */
-        Graph_lib::RegularHexagon rh{ Point{200,200}, 60 };
-        rh.set_color(Color::red);
+        //Graph_lib::RegularHexagon rh{ Point{200,200}, 60 };
+        //rh.set_color(Color::red);
 
-        win.attach(rh);
+        //win.attach(rh);
 
-        win.wait_for_button();
+        //win.wait_for_button();
         /* End of EXERCISE 13.8 */
+
+        /* EXERCISE 13.9 - Regular_hexagon tile */
+        Graph_lib::Vector_ref<RegularHexagon> rhs;
+        constexpr int side{ 30 };
+        int dy{ 100 };
+        int yini{ 100 };
+        for (int j = 0; j < 8; ++j)
+        {
+            int dx{ 100 };
+            for (int i = 0; i < 8; ++i)
+            {
+                (i % 2) == 0 ? dy = yini : dy = yini + 0.5 * side * sqrt(3);
+                rhs.push_back(new Graph_lib::RegularHexagon{ Point{dx,dy}, side });
+                rhs[rhs.size() - 1].set_color(Color(i));
+                win.attach(rhs[rhs.size() - 1]);
+                dx += 1.5 * side;
+            }
+            yini+= side*sqrt(3);
+        }
+        win.wait_for_button();
+        /* End of EXERCISE 13.9 */
     }
 }
 catch (exception& e) {
