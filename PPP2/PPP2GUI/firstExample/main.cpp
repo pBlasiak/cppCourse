@@ -11,6 +11,7 @@
 #include "Arrow/Arrow.h"            // get access to our graphics library facilities
 #include "LabeledBox/LabeledBox.h"            // get access to our graphics library facilities
 #include "RegularHexagon/RegularHexagon.h"            // get access to our graphics library facilities
+#include "RegularPolygon/RegularPolygon.h"            // get access to our graphics library facilities
 
 //------------------------------------------------------------------------------
 
@@ -249,25 +250,46 @@ try
         /* End of EXERCISE 13.8 */
 
         /* EXERCISE 13.9 - Regular_hexagon tile */
-        Graph_lib::Vector_ref<RegularHexagon> rhs;
-        constexpr int side{ 30 };
-        int dy{ 100 };
-        int yini{ 100 };
-        for (int j = 0; j < 8; ++j)
-        {
-            int dx{ 100 };
-            for (int i = 0; i < 8; ++i)
-            {
-                (i % 2) == 0 ? dy = yini : dy = yini + 0.5 * side * sqrt(3);
-                rhs.push_back(new Graph_lib::RegularHexagon{ Point{dx,dy}, side });
-                rhs[rhs.size() - 1].set_color(Color(i));
-                win.attach(rhs[rhs.size() - 1]);
-                dx += 1.5 * side;
-            }
-            yini+= side*sqrt(3);
-        }
-        win.wait_for_button();
+        //Graph_lib::Vector_ref<RegularHexagon> rhs;
+        //constexpr int side{ 30 };
+        //int dy{ 100 };
+        //int yini{ 100 };
+        //for (int j = 0; j < 8; ++j)
+        //{
+        //    int dx{ 100 };
+        //    for (int i = 0; i < 8; ++i)
+        //    {
+        //        (i % 2) == 0 ? dy = yini : dy = yini + 0.5 * side * sqrt(3);
+        //        rhs.push_back(new Graph_lib::RegularHexagon{ Point{dx,dy}, side });
+        //        rhs[rhs.size() - 1].set_color(Color(i));
+        //        win.attach(rhs[rhs.size() - 1]);
+        //        dx += 1.5 * side;
+        //    }
+        //    yini+= side*sqrt(3);
+        //}
+        //win.wait_for_button();
         /* End of EXERCISE 13.9 */
+
+
+        /* EXERCISE 13.10 - RegularPolygon */
+        Graph_lib::RegularPolygon rp{ Point{200,200}, 9, 100 };
+        rp.set_color(Color::blue);
+        win.attach(rp);
+
+	    Vector_ref<Mark> marks;
+	    for (int i = 0; i < rp.nSides(); ++i)
+	    {
+            cout << "Point " << i << " (" << rp.point(i).x << ", " << rp.point(i).y << ")" << endl;
+	    	string n( to_string(i) );
+	    	const char* nn{ n.c_str() };
+	    	marks.push_back(new Mark{ rp.point(i), *nn });
+	    	win.attach(marks[marks.size() - 1]); 
+	    }
+        marks.push_back(new Mark{ rp.center(),'c' });
+	    win.attach(marks[marks.size() - 1]); 
+
+        win.wait_for_button();
+        /* End of EXERCISE 13.10 */
     }
 }
 catch (exception& e) {
