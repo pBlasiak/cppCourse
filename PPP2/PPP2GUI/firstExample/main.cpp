@@ -272,24 +272,67 @@ try
 
 
         /* EXERCISE 13.10 - RegularPolygon */
-        Graph_lib::RegularPolygon rp{ Point{200,200}, 9, 100 };
-        rp.set_color(Color::blue);
-        win.attach(rp);
+        //Graph_lib::RegularPolygon rp{ Point{200,200}, 9, 100 };
+        //rp.set_color(Color::blue);
+        //win.attach(rp);
 
-	    Vector_ref<Mark> marks;
-	    for (int i = 0; i < rp.nSides(); ++i)
-	    {
-            cout << "Point " << i << " (" << rp.point(i).x << ", " << rp.point(i).y << ")" << endl;
-	    	string n( to_string(i) );
-	    	const char* nn{ n.c_str() };
-	    	marks.push_back(new Mark{ rp.point(i), *nn });
-	    	win.attach(marks[marks.size() - 1]); 
-	    }
-        marks.push_back(new Mark{ rp.center(),'c' });
-	    win.attach(marks[marks.size() - 1]); 
+	    //Vector_ref<Mark> marks;
+	    //for (int i = 0; i < rp.nSides(); ++i)
+	    //{
+        //    cout << "Point " << i << " (" << rp.point(i).x << ", " << rp.point(i).y << ")" << endl;
+	    //	string n( to_string(i) );
+	    //	const char* nn{ n.c_str() };
+	    //	marks.push_back(new Mark{ rp.point(i), *nn });
+	    //	win.attach(marks[marks.size() - 1]); 
+	    //}
+        //marks.push_back(new Mark{ rp.center(),'c' });
+	    //win.attach(marks[marks.size() - 1]); 
+
+        //win.wait_for_button();
+        /* End of EXERCISE 13.10 */
+
+
+        /* EXERCISE 13.11 - Draw ellipse */
+        Graph_lib::Ellipse e1{ Point{200,200}, 150, 100 };
+        e1.set_color(Color::dark_red);
+        Graph_lib::Mark f1{ e1.focus1(),'1' };
+        f1.set_color(Color::dark_red);
+        Graph_lib::Mark f2{ e1.focus2(),'2' };
+        f2.set_color(Color::dark_red);
+        Graph_lib::Ellipse e2{ Point{200,200}, 200, 150 };
+        e2.set_color(Color::dark_blue);
+        Graph_lib::Mark f3{ e2.focus1(),'3' };
+        f1.set_color(Color::dark_blue);
+        Graph_lib::Mark f4{ e2.focus2(),'4' };
+        f2.set_color(Color::dark_blue);
+
+        // rownanie elipsy o srodku w (h,k)
+        // ((x-h)^2)/a^2 +((y-k)^2)/b^2 = 1
+        const int h{ e1.center().x };
+        const int k{ e1.center().y };
+        const int x1{ h+20 };
+        double a( e1.major() );
+        double b( e1.minor() );
+        double A{b*b*(1-(x1-h)*(x1-h)/a/a)};
+        const int y1((k - sqrt(A)));
+        Graph_lib::Mark p{ Point{x1,y1},'p' };
+        Graph_lib::Line l1{ e1.focus1(),Point{x1,y1} };
+        l1.set_color(Color::cyan);
+        Graph_lib::Line l2{ e1.focus2(),Point{x1,y1} };
+        l2.set_color(Color::dark_magenta);
+
+        win.attach(e1);
+        win.attach(e2);
+        win.attach(f1);
+        win.attach(f2);
+        win.attach(f3);
+        win.attach(f4);
+        win.attach(p);
+        win.attach(l1);
+        win.attach(l2);
 
         win.wait_for_button();
-        /* End of EXERCISE 13.10 */
+        /* End of EXERCISE 13.11 */
     }
 }
 catch (exception& e) {
