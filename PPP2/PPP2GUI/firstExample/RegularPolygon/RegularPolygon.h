@@ -53,7 +53,7 @@ namespace Graph_lib
         int nSides() const { return nSides_; }
 
         //- Returns internal angle
-        int internalAngle() const { return angle_; } 
+        double internalAngle() const { return angle_; } 
 
         //- Returns length of a side
         int side() const { return side_; } 
