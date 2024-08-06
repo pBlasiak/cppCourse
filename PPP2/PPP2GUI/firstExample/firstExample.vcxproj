@@ -142,6 +142,7 @@
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="RegularHexagon\RegularHexagon.cpp" />
     <ClCompile Include="RegularPolygon\RegularPolygon.cpp" />
+    <ClCompile Include="RightTriangle\RightTriangle.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +156,7 @@
     <ClInclude Include="Point.h" />
     <ClInclude Include="RegularHexagon\RegularHexagon.h" />
     <ClInclude Include="RegularPolygon\RegularPolygon.h" />
+    <ClInclude Include="RightTriangle\RightTriangle.h" />
     <ClInclude Include="Simple_window.h" />
     <ClInclude Include="std_lib_facilities.h" />
     <ClInclude Include="Window.h" />
