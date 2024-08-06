@@ -335,31 +335,47 @@ try
         /* End of EXERCISE 13.11 */
 
         /* EXERCISE 13.12 - Draw circle */
-        int r{ 45 };
-        int dphi{ 5 };
-        Graph_lib::Circle c1{ Point{200,200},r };
-        c1.set_color(Color::blue);
-        win.attach(c1);
-        Graph_lib::Mark m{ Point{200-r,200},'x' };
-        win.attach(m);
+        //int r{ 45 };
+        //int dphi{ 5 };
+        //Graph_lib::Circle c1{ Point{200,200},r };
+        //c1.set_color(Color::blue);
+        //win.attach(c1);
+        //Graph_lib::Mark m{ Point{200-r,200},'x' };
+        //win.attach(m);
 
-        Point tp{ m.point(0) };
+        //Point tp{ m.point(0) };
 
-        for (int i=0;i<10;++i)
+        //for (int i=0;i<10;++i)
+        //{
+        //    const double dphiRad{ dphi * 3.14159265358979323846 / 180 };
+        //    int rotatedX( round((tp.x - c1.center().x) * cos(dphiRad) - (tp.y - c1.center().y) * sin(dphiRad) + c1.center().x ));
+        //    int rotatedY(round( (tp.x - c1.center().x) * sin(dphiRad) + (tp.y - c1.center().y) * cos(dphiRad) + c1.center().y ));
+        //    int dx(rotatedX-tp.x);
+        //    int dy(rotatedY-tp.y);
+        //    win.wait_for_button();
+        //    m.move(dx, dy); 
+        //    tp.x = m.point(0).x;
+        //    tp.y = m.point(0).y;
+        //}
+
+        //win.wait_for_button();
+        /* End of EXERCISE 13.12 */
+
+        /* EXERCISE 13.13 - Color pallete without borders */
+        Graph_lib::Vector_ref<Graph_lib::Rectangle> vr;
+        for (int i = 0; i < 16; ++i)
         {
-            const double dphiRad{ dphi * 3.14159265358979323846 / 180 };
-            int rotatedX( round((tp.x - c1.center().x) * cos(dphiRad) - (tp.y - c1.center().y) * sin(dphiRad) + c1.center().x ));
-            int rotatedY(round( (tp.x - c1.center().x) * sin(dphiRad) + (tp.y - c1.center().y) * cos(dphiRad) + c1.center().y ));
-            int dx(rotatedX-tp.x);
-            int dy(rotatedY-tp.y);
-            win.wait_for_button();
-            m.move(dx, dy); 
-            tp.x = m.point(0).x;
-            tp.y = m.point(0).y;
+            for (int j = 0; j<16; ++j) 
+            {
+                vr.push_back(new Graph_lib::Rectangle{Point{i * 20,j * 20},20,20});
+                vr[vr.size()-1].set_fill_color(Color{i*16+j});
+                vr[vr.size() - 1].set_color(Color::invisible);
+                win.attach(vr[vr.size()-1]);
+            } 
         }
 
         win.wait_for_button();
-        /* End of EXERCISE 13.12 */
+        /* End of EXERCISE 13.13 */
     }
 }
 catch (exception& e) {
