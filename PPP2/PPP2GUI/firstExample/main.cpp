@@ -336,21 +336,26 @@ try
 
         /* EXERCISE 13.12 - Draw circle */
         int r{ 45 };
+        int dphi{ 5 };
         Graph_lib::Circle c1{ Point{200,200},r };
         c1.set_color(Color::blue);
         win.attach(c1);
         Graph_lib::Mark m{ Point{200-r,200},'x' };
         win.attach(m);
 
-        int dx{ 20 };
-        int dphi{ 5 };
+        Point tp{ m.point(0) };
+
         for (int i=0;i<10;++i)
         {
-            // zle obliczane sa dx i dy
-            int dx( r * cos(dphi / 180) );
-            int dy( r * sin(dphi / 180) );
+            const double dphiRad{ dphi * 3.14159265358979323846 / 180 };
+            int rotatedX( round((tp.x - c1.center().x) * cos(dphiRad) - (tp.y - c1.center().y) * sin(dphiRad) + c1.center().x ));
+            int rotatedY(round( (tp.x - c1.center().x) * sin(dphiRad) + (tp.y - c1.center().y) * cos(dphiRad) + c1.center().y ));
+            int dx(rotatedX-tp.x);
+            int dy(rotatedY-tp.y);
             win.wait_for_button();
             m.move(dx, dy); 
+            tp.x = m.point(0).x;
+            tp.y = m.point(0).y;
         }
 
         win.wait_for_button();
