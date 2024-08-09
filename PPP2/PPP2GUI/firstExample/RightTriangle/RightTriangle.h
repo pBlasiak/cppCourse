@@ -38,6 +38,9 @@ namespace Graph_lib
         //- Returns angle between the base and X axis
         double angle() const { return angle_; }
 
+        //- Rotates triangle around center by angle 
+        void rotate(const Point& center, const double angle);
+
     };
 
 }

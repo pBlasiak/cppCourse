@@ -381,15 +381,45 @@ try
 
         /* EXERCISE 13.14 - Right triangle */
         Graph_lib::RightTriangle t1{ Point{200,200}, 50, 100, 0 };
+        Graph_lib::RightTriangle t2{ Point{200,200}, 50, 100, 0 };
+        Graph_lib::RightTriangle t3{ Point{200,200}, 50, 100, 0 };
+        Graph_lib::RightTriangle t4{ Point{200,200}, 50, 100, 0 };
+        Graph_lib::RightTriangle t5{ Point{200,200}, -50, 100, 0 };
+        Graph_lib::RightTriangle t6{ Point{200,200}, -50, 100, 0 };
+        Graph_lib::RightTriangle t7{ Point{200,200}, -50, 100, 0 };
+        Graph_lib::RightTriangle t8{ Point{200,200}, -50, 100, 0 };
         t1.set_color(Color::red);
-        Graph_lib::Mark m1{ t1.corner(), 'c' };
+        t1.set_fill_color(Color::red);
+        t2.set_color(Color::blue);
+        t2.set_fill_color(Color::blue);
+        t3.set_color(Color::yellow);
+        t3.set_fill_color(Color::yellow);
+        t4.set_color(Color::cyan);
+        t4.set_fill_color(Color::cyan);
+        t5.set_color(Color::black);
+        t5.set_fill_color(Color::black);
+        t6.set_color(Color::green);
+        t6.set_fill_color(Color::green);
+        t7.set_color(Color::magenta);
+        t7.set_fill_color(Color::magenta);
+        t8.set_color(39);
+        t8.set_fill_color(39);
+        t2.rotate(Point{ t1.corner().x,t1.corner().y - t1.height() }, 90);
+        t3.rotate(Point{ t1.corner().x,t1.corner().y - t1.height() }, 180);
+        t4.rotate(Point{ t1.corner().x,t1.corner().y - t1.height() }, 270);
+        t6.rotate(Point{ t1.corner().x,t1.corner().y - t1.height() }, 90);
+        t7.rotate(Point{ t1.corner().x,t1.corner().y - t1.height() }, 180);
+        t8.rotate(Point{ t1.corner().x,t1.corner().y - t1.height() }, 270);
+
         win.attach(t1);
-        win.attach(m1);
-        Graph_lib::RightTriangle t2{ Point{200,200}, -50, 100, 0 };
-        t2.set_color(Color::dark_yellow);
-        Graph_lib::Mark m2{ t2.corner(), 'x' };
         win.attach(t2);
-        win.attach(m2);
+        win.attach(t3);
+        win.attach(t4);
+        win.attach(t5);
+        win.attach(t6);
+        win.attach(t7);
+        win.attach(t8);
+
 
         win.wait_for_button();
         /* End of EXERCISE 13.14 */

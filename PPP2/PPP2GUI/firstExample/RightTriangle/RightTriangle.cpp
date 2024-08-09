@@ -11,10 +11,20 @@ Graph_lib::RightTriangle::RightTriangle
 	Point ht{ Point{corner_.x,corner_.y - h} };
 	if (angle_ != 0)
 	{
-		rotate(rb,corner_,angle_);
-		rotate(ht,corner_,angle_);
+		Graph_lib::rotate(rb, corner_, angle_);
+		Graph_lib::rotate(ht,corner_,angle_);
 	}
 	add(rb);
 	add(ht);
+}
+
+void Graph_lib::RightTriangle::rotate(const Point& c, const double a)
+{
+	for (int i = 0; i < number_of_points(); ++i)
+	{
+		Point p{ point(i) };
+		Graph_lib::rotate(p, c, a);
+		set_point(i, p);
+	}
 }
 
