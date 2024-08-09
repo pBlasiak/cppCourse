@@ -392,4 +392,19 @@ Point center(const Rectangle& r)
 	return Point{ r.point(0).x+r.width()/2, r.point(0).y + r.height() / 2};
 }
 
+double degToRadians(const double angle)
+{
+	constexpr double pi = 3.14159265358979323846;
+	return angle * pi / 180;
+}
+
+void rotate(Point& p, const Point& center, const double angle)
+{
+	const double angleRad{degToRadians(angle)};
+	int x = round((p.x-center.x) * cos(angleRad) - (p.y-center.y) * sin(angleRad) + center.x);
+	int y = round((p.x-center.x) * sin(angleRad) + (p.y-center.y) * cos(angleRad) + center.y);
+	p.x = x;
+	p.y = y;
+}
+
 } // Graph

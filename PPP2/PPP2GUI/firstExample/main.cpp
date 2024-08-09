@@ -12,6 +12,7 @@
 #include "LabeledBox/LabeledBox.h"            // get access to our graphics library facilities
 #include "RegularHexagon/RegularHexagon.h"            // get access to our graphics library facilities
 #include "RegularPolygon/RegularPolygon.h"            // get access to our graphics library facilities
+#include "RightTriangle/RightTriangle.h"            // get access to our graphics library facilities
 
 //------------------------------------------------------------------------------
 
@@ -379,9 +380,21 @@ try
 
 
         /* EXERCISE 13.14 - Right triangle */
+        Graph_lib::RightTriangle t1{ Point{200,200}, 50, 100, 0 };
+        t1.set_color(Color::red);
+        Graph_lib::Mark m1{ t1.corner(), 'c' };
+        win.attach(t1);
+        win.attach(m1);
+        Graph_lib::RightTriangle t2{ Point{200,200}, -50, 100, 0 };
+        t2.set_color(Color::dark_yellow);
+        Graph_lib::Mark m2{ t2.corner(), 'x' };
+        win.attach(t2);
+        win.attach(m2);
 
         win.wait_for_button();
         /* End of EXERCISE 13.14 */
+
+        // Dalszych zadañ nie robiê na razie i przechodze do rozdzialu 14
     }
 }
 catch (exception& e) {

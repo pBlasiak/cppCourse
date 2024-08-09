@@ -385,6 +385,13 @@ Point sw(const Rectangle& r);
 Point se(const Rectangle& r);
 Point center(const Rectangle& r);
 
+//- Reterns angle in degrees into radians
+double degToRadians(const double angle);
+
+
+//- Rotates point by angle given in degrees around given center
+void rotate(Point& p, const Point& center, const double angle);
+
 }
 #endif
 
