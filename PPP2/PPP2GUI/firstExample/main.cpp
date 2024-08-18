@@ -7,8 +7,17 @@
 //#include "Simple_window.h"    // get access to our window library
 #include "Graph.h"            // get access to our graphics library facilities
 #include "./Drill14/B1/B1.h"
+#include "./Drill14/B2/B2.h"
 #include "./Drill14/D1/D1.h"
 #include "./Drill14/D2/D2.h"
+#include "./Drill14/D21/D21.h"
+#include "./Drill14/D22/D22.h"
+
+
+void ff(Drill14::B2& b2)
+{
+    b2.pvf();
+}
 
 //------------------------------------------------------------------------------
 
@@ -39,10 +48,16 @@ try
         //b1ref.vf();
         //std::cout << std::endl;
 
-        Drill14::D2 d2;
-        d2.f();
-        d2.vf();
-        d2.pvf();
+        //Drill14::D2 d2;
+        //d2.f();
+        //d2.vf();
+        //d2.pvf();
+        //std::cout << std::endl;
+
+        Drill14::D21 d21{"STRING"};
+        Drill14::D22 d22{44};
+        ff(d21);
+        ff(d22);
         std::cout << std::endl;
     }
 }
@@ -54,5 +69,7 @@ catch (...) {
     // some more error reporting
     return 2;
 }
+
+
 
 //------------------------------------------------------------------------------

@@ -134,7 +134,10 @@
     <ClCompile Include="Arc.cpp" />
     <ClCompile Include="Arrow\Arrow.cpp" />
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Drill14\B2\B2.cpp" />
     <ClCompile Include="Drill14\D1\D1.cpp" />
+    <ClCompile Include="Drill14\D21\D21.cpp" />
+    <ClCompile Include="Drill14\D22\D22.cpp" />
     <ClCompile Include="Drill14\D2\D2.cpp" />
     <ClCompile Include="LabeledBox\LabeledBox.cpp" />
     <ClCompile Include="main.cpp">
@@ -152,7 +155,10 @@
     <ClInclude Include="Arrow\Arrow.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Drill14\B1\B1.h" />
+    <ClInclude Include="Drill14\B2\B2.h" />
     <ClInclude Include="Drill14\D1\D1.h" />
+    <ClInclude Include="Drill14\D21\D21.h" />
+    <ClInclude Include="Drill14\D22\D22.h" />
     <ClInclude Include="Drill14\D2\D2.h" />
     <ClInclude Include="fltk.h" />
     <ClInclude Include="Graph.h" />
