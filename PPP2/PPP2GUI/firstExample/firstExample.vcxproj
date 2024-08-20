@@ -148,6 +148,7 @@
     <ClCompile Include="RegularHexagon\RegularHexagon.cpp" />
     <ClCompile Include="RegularPolygon\RegularPolygon.cpp" />
     <ClCompile Include="RightTriangle\RightTriangle.cpp" />
+    <ClCompile Include="Smiley\Smiley.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +170,7 @@
     <ClInclude Include="RegularPolygon\RegularPolygon.h" />
     <ClInclude Include="RightTriangle\RightTriangle.h" />
     <ClInclude Include="Simple_window.h" />
+    <ClInclude Include="Smiley\Smiley.h" />
     <ClInclude Include="std_lib_facilities.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
