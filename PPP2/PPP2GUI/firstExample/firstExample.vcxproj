@@ -139,6 +139,7 @@
     <ClCompile Include="Drill14\D21\D21.cpp" />
     <ClCompile Include="Drill14\D22\D22.cpp" />
     <ClCompile Include="Drill14\D2\D2.cpp" />
+    <ClCompile Include="HatSmiley\HatSmiley.cpp" />
     <ClCompile Include="LabeledBox\LabeledBox.cpp" />
     <ClCompile Include="main.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\pblasiak\D\DYDAKTYKA\PRZEDMIOTY\CPP\fltk\fltkKurs\PPP2\GUI;C:\Users\pblasiak\D\DYDAKTYKA\PRZEDMIOTY\CPP\fltk\fltk-1.3.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -164,6 +165,7 @@
     <ClInclude Include="fltk.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="Gui.h" />
+    <ClInclude Include="HatSmiley\HatSmiley.h" />
     <ClInclude Include="LabeledBox\LabeledBox.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="RegularHexagon\RegularHexagon.h" />

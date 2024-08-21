@@ -7,6 +7,8 @@
 #include "Simple_window.h"    // get access to our window library
 #include "Graph.h"            // get access to our graphics library facilities
 #include "./Smiley/Smiley.h"
+#include "./HatSmiley/HatSmiley.h"
+
 
 
 
@@ -26,6 +28,10 @@ try
         s.set_color(Color::red);
         s.set_fill_color(Color::blue);
         win.attach(s);
+        
+        Graph_lib::Rectangle r{ Point{100,100},50,50 };
+
+        HatSmiley hs{ Point{400,400}, 150, 20, 100, 40, 60,30 };
 
 
         win.wait_for_button();
