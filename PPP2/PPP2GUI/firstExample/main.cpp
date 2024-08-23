@@ -8,6 +8,7 @@
 #include "Graph.h"            // get access to our graphics library facilities
 #include "./Smiley/Smiley.h"
 #include "./HatSmiley/HatSmiley.h"
+#include "./ImmobileCircle/ImmobileCircle.h"
 
 
 
@@ -24,19 +25,27 @@ try
 
         Simple_window win(tl, 800, 600, "Canvas");    // make a simple window
         
-        Smiley s{ Point{200,200}, 100, 20, 60,30 };
-        s.set_color(Color::red);
-        s.set_fill_color(Color::blue);
-        win.attach(s);
-        
-        Graph_lib::Rectangle r{ Point{100,100},50,50 };
-        
+        /***** EXERCISE 14.1 - Smiley and HatSmiley *****/
+        //Smiley s{ Point{200,200}, 100, 20, 60,30 };
+        //s.set_color(Color::red);
+        //s.set_fill_color(Color::blue);
+        //win.attach(s);
+        //
+        //Graph_lib::Rectangle r{ Point{100,100},50,50 };
+        //
 
-        HatSmiley hs{ Point{400,400}, 150, 20, 100, 40, 60,30 };
-        hs.set_color(Color::blue);
+        //HatSmiley hs{ Point{400,400}, 150, 20, 100, 40, 60,30 };
+        //hs.set_color(Color::blue);
 
-        win.attach(hs);
+        //win.attach(hs);
+        /***** End of EXERCISE 14.1 - Smiley and HatSmiley *****/
 
+        /***** EXERCISE 14.4 - ImmobileCircle *****/
+        Graph_lib::ImmobileCircle ic{ Point{200,200}, 50 };
+        ic.set_color(Color::yellow);
+        //ic.move(20,20);
+        win.attach(ic);
+        /***** End of EXERCISE 14.4 - ImmobileCircle *****/
 
 
 
