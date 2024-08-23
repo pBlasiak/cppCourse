@@ -30,8 +30,14 @@ try
         win.attach(s);
         
         Graph_lib::Rectangle r{ Point{100,100},50,50 };
+        
 
         HatSmiley hs{ Point{400,400}, 150, 20, 100, 40, 60,30 };
+        hs.set_color(Color::blue);
+
+        win.attach(hs);
+
+
 
 
         win.wait_for_button();

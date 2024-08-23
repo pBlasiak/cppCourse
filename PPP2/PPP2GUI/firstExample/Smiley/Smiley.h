@@ -28,6 +28,12 @@ public:
 
     //- Draws siley face
     void draw_lines() const override;
+
+    //- Returns eye radius
+    int eyeRadius() const
+    {
+        return eyeRadius_;
+    }
 };
 }
 

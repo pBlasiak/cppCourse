@@ -10,16 +10,16 @@ class HatSmiley :
 {
 private: 
 
-    //- Hat width
-    int hatWidth_;
-
-    //- Hat heigth
-    int hatHeight_;
+    //- Hat
+    Rectangle hat_;
 
 public:
 
     HatSmiley(Point c, int faceRadius, int eyeRadius, int mouthWidth, int mouthHeight,
         int hatWidth, int hatHeigth);
+
+    void draw_lines() const override;
+
 };
 
 }
